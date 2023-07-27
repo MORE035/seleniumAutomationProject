@@ -2,25 +2,29 @@ package org.sap.pages;
 
 import org.openqa.selenium.By;
 import org.sap.driver.DriverManager;
+import org.sap.enums.WaitStrategy;
 
-public final class OrangeHrmLoginPage {
+public final class OrangeHrmLoginPage extends BasePage {
 
-	private final By textbox_username=By.xpath("//input[@name='username']");
-	private final By textbox_password=By.xpath("//input[@name='password' and @type='password']");
-	private final By button_login=By.xpath("//button[@type='submit']");
+	private final By textboxUserName=By.xpath("//input[@name='username']");
+	private final By textboxPassword=By.xpath("//input[@name='password' and @type='password']");
+	private final By buttonLogin=By.xpath("//button[@type='submit']");
 	
 	public OrangeHrmLoginPage enterUserName(String username) {
-		DriverManager.getDriver().findElement(textbox_username).sendKeys(username);
+		enterText(textboxUserName,WaitStrategy.PRESENCE,username);
 		return this;
 
 	}
 	public OrangeHrmLoginPage enterPassword(String password) {
-		DriverManager.getDriver().findElement(textbox_password).sendKeys(password);
+		enterText(textboxPassword,WaitStrategy.PRESENCE,password);
 		return this;
 	}
 	public OrangeHrmHomePage clickLogin() {
-		DriverManager.getDriver().findElement(button_login).click();
+		click(buttonLogin,WaitStrategy.CLICKBLE);
 		return new OrangeHrmHomePage();
 	}
-	
+	public String getTitle() {
+		return getPageTitle();
+		
+	}
 }

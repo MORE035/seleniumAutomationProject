@@ -9,6 +9,7 @@ import java.util.Objects;
 import java.util.Properties;
 
 import org.sap.constants.FrameworkConstants;
+import org.sap.enums.ConfigProperties;
 
 public class ReadPropertyFile {
 
@@ -43,12 +44,12 @@ public class ReadPropertyFile {
 	
 	
 	//Hash table -little slow but thread safe
-	public static String get(String key) throws Exception {
+	public static String get(ConfigProperties key) throws Exception {
 		if(Objects.isNull(key)||Objects.isNull(CONFIGMAP.get(key))) {
 			throw new Exception("property key :" + key + " value is null");
 
 		}
-		return CONFIGMAP.get(key);
+		return CONFIGMAP.get(key.toString().toLowerCase());
 	}
 
 	@Deprecated //replaced with get()
