@@ -26,14 +26,16 @@ public class HomePageTests extends BaseTest{
 		.isNotNull()
 		.hasSizeBetween(15, 100)
 		.containsIgnoringCase("google search");
-	/*	Assert.assertTrue(Objects.nonNull(title),"Title is NULL check once");
+		
+	/*	TestNG Assertions
+	 	Assert.assertTrue(Objects.nonNull(title),"Title is NULL check once");
 		Assert.assertTrue(title.length()>15 && title.length()<100);
 		Assert.assertTrue(title.toLowerCase().contains("google search"),"google search not present in perticler title");
 		*/
 		List<WebElement> listLinks = DriverManager.getDriver().findElements(By.xpath("//div[@class='yuRUbf']/a/h3"));
 		Assertions.assertThat(listLinks)
-		.hasSizeBetween(8,11)
-		.extracting(e->e.getText());
+		.hasSizeBetween(8,11);
+	//	.extracting(e->e.getText());
 	//	.matches("\\w"+"Testing Mini Bytes");
 	/*	Assert.assertEquals(listLinks.size(),9,"Size is not equals");
 		boolean isPresent=false;

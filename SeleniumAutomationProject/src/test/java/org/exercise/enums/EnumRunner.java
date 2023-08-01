@@ -1,4 +1,4 @@
-package org.enums;
+package org.exercise.enums;
 
 public class EnumRunner {
 	public static void main(String[] args) {

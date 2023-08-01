@@ -1,4 +1,4 @@
-package org.enums;
+package org.exercise.enums;
 
 public enum severity {
 	

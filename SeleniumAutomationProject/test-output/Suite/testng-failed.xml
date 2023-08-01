@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="org.sap.tests.HomePageTests">
+      <class name="org.sap.tests.OrangeHrmTests">
         <methods>
           <include name="setUp"/>
+          <include name="test1"/>
           <include name="tearDown"/>
-          <include name="test3"/>
         </methods>
-      </class> <!-- org.sap.tests.HomePageTests -->
+      </class> <!-- org.sap.tests.OrangeHrmTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

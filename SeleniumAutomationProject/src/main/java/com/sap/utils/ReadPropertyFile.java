@@ -45,7 +45,7 @@ public class ReadPropertyFile {
 	
 	//Hash table -little slow but thread safe
 	public static String get(ConfigProperties key) throws Exception {
-		if(Objects.isNull(key)||Objects.isNull(CONFIGMAP.get(key))) {
+		if(Objects.isNull(key)||Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
 			throw new Exception("property key :" + key + " value is null");
 
 		}

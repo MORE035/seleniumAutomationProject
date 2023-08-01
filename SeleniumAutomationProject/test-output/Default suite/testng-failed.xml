@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.sap.tests.OrangeHrmTests">
+      <class name="org.exercise.dataprovider.latest.DataProviderTest">
         <methods>
-          <include name="setUp"/>
-          <include name="test1"/>
-          <include name="tearDown"/>
+          <include name="dataProvierTestjsonFile"/>
         </methods>
-      </class> <!-- org.sap.tests.OrangeHrmTests -->
+      </class> <!-- org.exercise.dataprovider.latest.DataProviderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
