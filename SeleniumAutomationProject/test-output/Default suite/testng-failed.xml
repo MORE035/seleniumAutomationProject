@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.exercise.dataprovider.latest.DataProviderTest">
+      <class name="org.exercise.testNgListners.Runner">
         <methods>
-          <include name="dataProvierTestjsonFile"/>
+          <include name="tearTest"/>
+          <include name="tearSuite"/>
+          <include name="initSuite"/>
+          <include name="test2"/>
+          <include name="initTest"/>
+          <include name="initMethod"/>
+          <include name="tearMethod"/>
         </methods>
-      </class> <!-- org.exercise.dataprovider.latest.DataProviderTest -->
+      </class> <!-- org.exercise.testNgListners.Runner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

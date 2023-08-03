@@ -8,6 +8,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sap.driver.DriverManager;
 import org.sap.enums.WaitStrategy;
+import org.sap.reports.ExtentLogger;
+import org.sap.reports.ExtentManager;
+import org.sap.reports.ExtentReporter;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 
@@ -16,7 +19,7 @@ public class OrangeHrmHomePage extends BasePage {
 	private final By linkLogout = By.xpath("//a[text()='Logout']");
 
 	public OrangeHrmHomePage clickNameDropDown() {
-		click(dropdownName,WaitStrategy.CLICKBLE);
+		click(dropdownName, WaitStrategy.CLICKBLE,"clicked name drop down");
 		return this;
 	}
 
@@ -25,7 +28,7 @@ public class OrangeHrmHomePage extends BasePage {
 		// Thread.sleep
 		WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), 10);
 		wait.until(ExpectedConditions.elementToBeClickable(linkLogout));
-		click(linkLogout,WaitStrategy.CLICKBLE);
+		click(linkLogout, WaitStrategy.CLICKBLE,"clicked Logout link");
 		return new OrangeHrmLoginPage();
 	}
 
