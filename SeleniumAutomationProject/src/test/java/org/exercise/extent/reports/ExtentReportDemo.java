@@ -2,9 +2,9 @@ package org.exercise.extent.reports;
 
 import java.awt.Desktop;
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Method;
 
+import org.sap.constants.FrameworkConstants;
 import org.testng.IMethodInstance;
 import org.testng.annotations.Test;
 
@@ -15,9 +15,9 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReportDemo {
 	@Test
-	public void test1() throws IOException {
+	public void test1() throws Exception {
 		ExtentReports report=new ExtentReports();
-		ExtentSparkReporter spark=new ExtentSparkReporter("index.html");
+		ExtentSparkReporter spark=new ExtentSparkReporter(FrameworkConstants.getExtentReportFilePath());
 		report.attachReporter(spark);
 		spark.config().setTheme(Theme.DARK);
 		spark.config().setReportName("Vasanth");

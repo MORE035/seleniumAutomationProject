@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.sap.tests.OrangeHrmTests" class="method navigator-link" hash-for-method="test1(admin123, admin1)">test1(admin123, admin1)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="org.sap.tests.OrangeHrmTests" class="method navigator-link" hash-for-method="newTest1({browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin})">newTest1({browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -117,17 +117,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.sap.tests.OrangeHrmTests" class="method navigator-link" hash-for-method="test1(Admin, admin123)">test1(Admin, admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="org.sap.tests.OrangeHrmTests" class="method navigator-link" hash-for-method="loginLogoutTest1({browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, username...)">loginLogoutTest1({browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, username...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.sap.tests.OrangeHrmTests" class="method navigator-link" hash-for-method="test1(Admin, admin123)">test1(Admin, admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="org.sap.tests.OrangeHrmTests" class="method navigator-link" hash-for-method="loginLogoutTest1({browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admin...)">loginLogoutTest1({browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admin...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.sap.tests.OrangeHrmTests" class="method navigator-link" hash-for-method="test1(Admin, admin123)">test1(Admin, admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="org.sap.tests.OrangeHrmTests" class="method navigator-link" hash-for-method="loginLogoutTest2({browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Adm...)">loginLogoutTest2({browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Adm...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -150,31 +150,28 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test1(admin123, admin1)">
-                  </a> <!-- test1(admin123, admin1) -->
-                  <span class="method-name">test1</span>
-                  <span class="parameters">(admin123,admin1)</span>
+                  <a name="newTest1({browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin})">
+                  </a> <!-- newTest1({browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin}) -->
+                  <span class="method-name">newTest1</span>
+                  <span class="parameters">({browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin})</span>
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[@class=&apos;oxd-userdropdown-name&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at org.sap.factories.ExpliciteWaitFactory.performExplicteWait(ExpliciteWaitFactory.java:17)
 	at org.sap.pages.BasePage.click(BasePage.java:15)
 	at org.sap.pages.OrangeHrmHomePage.clickNameDropDown(OrangeHrmHomePage.java:22)
-	at org.sap.tests.OrangeHrmTests.test1(OrangeHrmTests.java:20)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.sap.tests.OrangeHrmTests.newTest1(OrangeHrmTests.java:43)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[@class=&apos;oxd-userdropdown-name&apos;]&quot;}
-  (Session info: chrome=115.0.5790.110)
+  (Session info: chrome=115.0.5790.171)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MOREVASANTHKUMA&apos;, ip: &apos;192.168.0.106&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+System info: host: &apos;MOREVASANTHKUMA&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\SPUGE\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64705}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 800cf7a30825bfa76ed5864f42a45237
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\SPUGE\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52448}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ca8c7cd7a5896a0c648f1e64087b092
 *** Element info: {Using=xpath, value=//p[@class=&apos;oxd-userdropdown-name&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -192,8 +189,10 @@ Session ID: 800cf7a30825bfa76ed5864f42a45237
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 19 more
-... Removed 13 stack frames
+... Removed 16 stack frames
 </div> <!-- stack-trace -->
+                  <em>
+(To check wheather test is executed)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,26 +205,32 @@ Session ID: 800cf7a30825bfa76ed5864f42a45237
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test1(Admin, admin123)">
-                  </a> <!-- test1(Admin, admin123) -->
-                  <span class="method-name">test1</span>
-                  <span class="parameters">(Admin,admin123)</span>
+                  <a name="loginLogoutTest1({browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, username...)">
+                  </a> <!-- loginLogoutTest1({browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, username...) -->
+                  <span class="method-name">loginLogoutTest1</span>
+                  <span class="parameters">({browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, username=Admin})</span>
+                  <em>
+(To check wheather user can successfully Login and logout)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test1(Admin, admin123)">
-                  </a> <!-- test1(Admin, admin123) -->
-                  <span class="method-name">test1</span>
-                  <span class="parameters">(Admin,admin123)</span>
+                  <a name="loginLogoutTest1({browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admin...)">
+                  </a> <!-- loginLogoutTest1({browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admin...) -->
+                  <span class="method-name">loginLogoutTest1</span>
+                  <span class="parameters">({browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admin})</span>
+                  <em>
+(To check wheather user can successfully Login and logout)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test1(Admin, admin123)">
-                  </a> <!-- test1(Admin, admin123) -->
-                  <span class="method-name">test1</span>
-                  <span class="parameters">(Admin,admin123)</span>
+                  <a name="loginLogoutTest2({browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Adm...)">
+                  </a> <!-- loginLogoutTest2({browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Adm...) -->
+                  <span class="method-name">loginLogoutTest2</span>
+                  <span class="parameters">({browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Admin})</span>
+                  <em>
+(Login logout test 2)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -242,6 +247,8 @@ Session ID: 800cf7a30825bfa76ed5864f42a45237
 &lt;suite data-provider-thread-count=&quot;3&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;org.sap.Listeners.ListenersClass&quot;/&gt;
+    &lt;listener class-name=&quot;org.sap.Listeners.MethodInterceptor&quot;/&gt;
+    &lt;listener class-name=&quot;org.sap.Listeners.AnnotationTransFormer&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;4&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
@@ -287,26 +294,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test1')
+data.setCell(0, 1, 'newTest1')
 data.setCell(0, 2, 'org.sap.tests.OrangeHrmTests')
-data.setCell(0, 3, 12377);
+data.setCell(0, 3, 14598);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test1')
+data.setCell(1, 1, 'loginLogoutTest1')
 data.setCell(1, 2, 'org.sap.tests.OrangeHrmTests')
-data.setCell(1, 3, 7294);
+data.setCell(1, 3, 8972);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'test1')
+data.setCell(2, 1, 'loginLogoutTest2')
 data.setCell(2, 2, 'org.sap.tests.OrangeHrmTests')
-data.setCell(2, 3, 6632);
+data.setCell(2, 3, 8373);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'test1')
+data.setCell(3, 1, 'loginLogoutTest1')
 data.setCell(3, 2, 'org.sap.tests.OrangeHrmTests')
-data.setCell(3, 3, 4815);
+data.setCell(3, 3, 6175);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -321,9 +328,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">org.sap.tests.OrangeHrmTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">test1</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -334,54 +348,54 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">org.sap.tests.OrangeHrmTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void org.sap.tests.OrangeHrmTests.test1(java.lang.String,java.lang.String))</span>
+                <span class="method-name">setUp([{browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void org.sap.tests.OrangeHrmTests.test1(java.lang.String,java.lang.String))</span>
-                <span class="method-start">1 ms</span>
+                <span class="method-name">setUp([{browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Ad...)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void org.sap.tests.OrangeHrmTests.test1(java.lang.String,java.lang.String))</span>
-                <span class="method-start">2 ms</span>
+                <span class="method-name">setUp([{browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, usernam...)</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">test1(Admin, admin123)</span>
-                <span class="method-start">8582 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">test1(Admin, admin123)</span>
-                <span class="method-start">8947 ms</span>
-              </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">test1(admin123, admin1)</span>
-                <span class="method-start">10447 ms</span>
+                <span class="method-name">newTest1({browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin})</span>
+                <span class="method-start">8434 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginLogoutTest1({browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, username...)</span>
+                <span class="method-start">9077 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginLogoutTest2({browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Adm...)</span>
+                <span class="method-start">11457 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15260 ms</span>
+                <span class="method-start">18395 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void org.sap.tests.OrangeHrmTests.test1(java.lang.String,java.lang.String))</span>
-                <span class="method-start">15844 ms</span>
+                <span class="method-name">setUp([{browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admi...)</span>
+                <span class="method-start">19361 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">16243 ms</span>
+                <span class="method-start">20317 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">23601 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">test1(Admin, admin123)</span>
-                <span class="method-start">21043 ms</span>
+                <span class="method-name">loginLogoutTest1({browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admin...)</span>
+                <span class="method-start">32773 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22828 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">25863 ms</span>
+                <span class="method-start">38989 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -46,7 +46,7 @@ public final class DataProviderTest {
 	}
 	@Test(dataProvider = "dataProviderWithJsonFiles")
 	public void dataProvierTestjsonFile(Map<String,Object>map) {
-		map.forEach((k,v)->System.out.println(k+" "+v));
+		//map.forEach((k,v)->System.out.println(k+" "+v));
 	}
 
 	@DataProvider // Note mutiple test data single Data test

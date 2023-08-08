@@ -11,15 +11,26 @@ import org.sap.reports.ExtentLogger;
 
 public class BasePage {
 
-	protected void click(By by, WaitStrategy waitStrategy,String elementName) {
+	protected void click(By by, WaitStrategy waitStrategy,String elementName)  {
 		ExpliciteWaitFactory.performExplicteWait(waitStrategy, by).click();
-		ExtentLogger.pass(elementName);
+		//ExtentLogger.pass(elementName);
+		try {
+			ExtentLogger.pass(elementName, true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		//DriverManager.getDriver().findElement(by).click(); //clubed this code into Explicitewait factory
 	}
 
-	protected void enterText(By by, WaitStrategy waitStrategy, String value,String elementName) {
+	protected void enterText(By by, WaitStrategy waitStrategy, String value,String elementName){
 		ExpliciteWaitFactory.performExplicteWait(waitStrategy, by).sendKeys(value);;
-		ExtentLogger.pass("value "+value+" entered in "+elementName);
+		try {
+			ExtentLogger.pass("value "+value+" entered in "+elementName,true);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
 
 		//DriverManager.getDriver().findElement(by).sendKeys(value); //clubed this code into Explicitewait factory
 	}

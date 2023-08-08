@@ -4,6 +4,7 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Map;
 
 import org.sap.driver.Driver;
 import org.sap.reports.ExtentReporter;
@@ -21,10 +22,11 @@ public class BaseTest {
 	protected BaseTest() {
 		
 	}
-	
+	@SuppressWarnings("unchecked")
 	@BeforeMethod
-	protected void setUp(Method m) throws Exception {
-		Driver.initDriver();
+	protected void setUp(Object[] data) throws Exception {
+		Map<String, String> map = (Map<String,String>)data[0];
+		Driver.initDriver(map.get("browser"));
 
 
 	}

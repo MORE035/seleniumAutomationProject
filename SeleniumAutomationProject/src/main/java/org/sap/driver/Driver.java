@@ -5,28 +5,41 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.sap.constants.FrameworkConstants;
 import org.sap.enums.ConfigProperties;
 
 import com.sap.utils.JsonUtils;
-import com.sap.utils.ReadPropertyFile;
+import com.sap.utils.ReadPropertyFileUtils;
 
 public final class Driver {
 	private Driver() {
-		
-	}
-	
 
-	public static void initDriver() throws Exception {
+	}
+
+	public static void initDriver(String driver) throws Exception {
 		if (Objects.isNull(DriverManager.getDriver())) {
-			System.setProperty("webdriver.chrome.driver", FrameworkConstants.getCHROMEDRIVERPATH());
-			WebDriver driver = new ChromeDriver();
-		//	DriverManager.setDriver(new ChromeDriver()); one more way.....
-			DriverManager.setDriver(driver);
-			DriverManager.getDriver().get(ReadPropertyFile.get(ConfigProperties.URL));
-			DriverManager.getDriver().manage().window().maximize();
-		//	DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			if (driver.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver", FrameworkConstants.getCHROMEDRIVERPATH());
+				// DriverManager.setDriver(new ChromeDriver()); one more way.....
+				DriverManager.setDriver(new ChromeDriver());
+
+			} else if (driver.equalsIgnoreCase("firefox")) {
+
+				System.setProperty("webdriver.gecko.driver", FrameworkConstants.getFirefoxdriverpath());
+				DriverManager.setDriver(new FirefoxDriver() );
+
+			} else if (driver.equalsIgnoreCase("edge")) {
+
+				System.setProperty("webdriver.edge.driver", FrameworkConstants.getEdgedriverpath());
+				DriverManager.setDriver(new EdgeDriver());
+			}
 		}
+		DriverManager.getDriver().get(ReadPropertyFileUtils.get(ConfigProperties.URL));
+		DriverManager.getDriver().manage().window().maximize();
+		// DriverManager.getDriver().manage().timeouts().implicitlyWait(10,
+		// TimeUnit.SECONDS);
 	}
 
 	public static void quitDriver() {

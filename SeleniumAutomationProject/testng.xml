@@ -3,6 +3,8 @@
 <suite name="Suite" data-provider-thread-count="3">
 	<listeners>
 		<listener class-name="org.sap.Listeners.ListenersClass"></listener>
+		<listener class-name="org.sap.Listeners.MethodInterceptor"></listener>
+		<listener class-name="org.sap.Listeners.AnnotationTransFormer"></listener>
 	</listeners>
 	<test thread-count="4" name="Test" parallel="methods">
 		<classes>

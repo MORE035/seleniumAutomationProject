@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 03 17:08:45 IST 2023</td>
+<td>Started on:</td><td>Tue Aug 08 18:41:50 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>26 seconds (26376 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41664 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,28 +76,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.sap.tests.OrangeHrmTests.test1()'><b>test1</b><br>Test class: org.sap.tests.OrangeHrmTests<br>Parameters: admin123, admin1</td>
+<td title='org.sap.tests.OrangeHrmTests.newTest1()'><b>newTest1</b><br>Test class: org.sap.tests.OrangeHrmTests<br>Test method: To check wheather test is executed<br>Parameters: {browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin}</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[@class=&apos;oxd-userdropdown-name&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at org.sap.factories.ExpliciteWaitFactory.performExplicteWait(ExpliciteWaitFactory.java:17)
 	at org.sap.pages.BasePage.click(BasePage.java:15)
 	at org.sap.pages.OrangeHrmHomePage.clickNameDropDown(OrangeHrmHomePage.java:22)
-	at org.sap.tests.OrangeHrmTests.test1(OrangeHrmTests.java:20)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.sap.tests.OrangeHrmTests.newTest1(OrangeHrmTests.java:43)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[@class=&apos;oxd-userdropdown-name&apos;]&quot;}
-  (Session info: chrome=115.0.5790.110)
+  (Session info: chrome=115.0.5790.171)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MOREVASANTHKUMA&apos;, ip: &apos;192.168.0.106&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+System info: host: &apos;MOREVASANTHKUMA&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\SPUGE\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64705}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 800cf7a30825bfa76ed5864f42a45237
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\SPUGE\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52448}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ca8c7cd7a5896a0c648f1e64087b092
 *** Element info: {Using=xpath, value=//p[@class=&apos;oxd-userdropdown-name&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -115,14 +112,14 @@ Session ID: 800cf7a30825bfa76ed5864f42a45237
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 19 more
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1620430699", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1620430699'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[@class=&apos;oxd-userdropdown-name&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace877100195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace877100195'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[@class=&apos;oxd-userdropdown-name&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at org.sap.factories.ExpliciteWaitFactory.performExplicteWait(ExpliciteWaitFactory.java:17)
 	at org.sap.pages.BasePage.click(BasePage.java:15)
 	at org.sap.pages.OrangeHrmHomePage.clickNameDropDown(OrangeHrmHomePage.java:22)
-	at org.sap.tests.OrangeHrmTests.test1(OrangeHrmTests.java:20)
+	at org.sap.tests.OrangeHrmTests.newTest1(OrangeHrmTests.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,24 +127,24 @@ Session ID: 800cf7a30825bfa76ed5864f42a45237
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:80)
-	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:17)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[@class=&apos;oxd-userdropdown-name&apos;]&quot;}
-  (Session info: chrome=115.0.5790.110)
+  (Session info: chrome=115.0.5790.171)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MOREVASANTHKUMA&apos;, ip: &apos;192.168.0.106&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+System info: host: &apos;MOREVASANTHKUMA&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\SPUGE\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64705}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 800cf7a30825bfa76ed5864f42a45237
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\SPUGE\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52448}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ca8c7cd7a5896a0c648f1e64087b092
 *** Element info: {Using=xpath, value=//p[@class=&apos;oxd-userdropdown-name&apos;]}
-	at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+	at jdk.internal.reflect.GeneratedConstructorAccessor27.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -168,8 +165,8 @@ Session ID: 800cf7a30825bfa76ed5864f42a45237
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 19 more
 </pre></div></td>
-<td>12</td>
-<td>org.sap.tests.OrangeHrmTests@36902638</td></tr>
+<td>14</td>
+<td>org.sap.tests.OrangeHrmTests@436813f3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -180,20 +177,20 @@ Session ID: 800cf7a30825bfa76ed5864f42a45237
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.sap.tests.OrangeHrmTests.test1()'><b>test1</b><br>Test class: org.sap.tests.OrangeHrmTests<br>Parameters: Admin, admin123</td>
+<td title='org.sap.tests.OrangeHrmTests.loginLogoutTest1()'><b>loginLogoutTest1</b><br>Test class: org.sap.tests.OrangeHrmTests<br>Test method: To check wheather user can successfully Login and logout<br>Parameters: {browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, username=Admin}</td>
 <td></td>
-<td>4</td>
-<td>org.sap.tests.OrangeHrmTests@36902638</td></tr>
+<td>8</td>
+<td>org.sap.tests.OrangeHrmTests@436813f3</td></tr>
 <tr>
-<td title='org.sap.tests.OrangeHrmTests.test1()'><b>test1</b><br>Test class: org.sap.tests.OrangeHrmTests<br>Parameters: Admin, admin123</td>
+<td title='org.sap.tests.OrangeHrmTests.loginLogoutTest1()'><b>loginLogoutTest1</b><br>Test class: org.sap.tests.OrangeHrmTests<br>Test method: To check wheather user can successfully Login and logout<br>Parameters: {browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admin}</td>
 <td></td>
 <td>6</td>
-<td>org.sap.tests.OrangeHrmTests@36902638</td></tr>
+<td>org.sap.tests.OrangeHrmTests@436813f3</td></tr>
 <tr>
-<td title='org.sap.tests.OrangeHrmTests.test1()'><b>test1</b><br>Test class: org.sap.tests.OrangeHrmTests<br>Parameters: Admin, admin123</td>
+<td title='org.sap.tests.OrangeHrmTests.loginLogoutTest2()'><b>loginLogoutTest2</b><br>Test class: org.sap.tests.OrangeHrmTests<br>Test method: Login logout test 2<br>Parameters: {browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Admin}</td>
 <td></td>
-<td>7</td>
-<td>org.sap.tests.OrangeHrmTests@36902638</td></tr>
+<td>8</td>
+<td>org.sap.tests.OrangeHrmTests@436813f3</td></tr>
 </table><p>
 </body>
 </html>

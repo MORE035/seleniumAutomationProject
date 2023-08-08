@@ -3,14 +3,16 @@
 <suite data-provider-thread-count="3" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="org.sap.Listeners.ListenersClass"/>
+    <listener class-name="org.sap.Listeners.MethodInterceptor"/>
+    <listener class-name="org.sap.Listeners.AnnotationTransFormer"/>
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
       <class name="org.sap.tests.OrangeHrmTests">
         <methods>
           <include name="setUp"/>
-          <include name="test1" invocation-numbers="1"/>
           <include name="tearDown"/>
+          <include name="newTest1" invocation-numbers="0"/>
         </methods>
       </class> <!-- org.sap.tests.OrangeHrmTests -->
     </classes>

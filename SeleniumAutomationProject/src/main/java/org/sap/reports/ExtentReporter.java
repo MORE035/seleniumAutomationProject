@@ -2,9 +2,9 @@ package org.sap.reports;
 
 import java.awt.Desktop;
 import java.io.File;
-import java.io.IOException;
 import java.util.Objects;
 
+import org.sap.constants.FrameworkConstants;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -20,10 +20,10 @@ public final class ExtentReporter {
 	private static ExtentReports report;
 	public static ExtentTest test;
 
-	public static void initReports() {
+	public static void initReports() throws Exception {
 		if (Objects.isNull(report)) {
 			report = new ExtentReports();
-			ExtentSparkReporter spark = new ExtentSparkReporter("index.html");
+			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentReportFilePath());
 			report.attachReporter(spark);
 			spark.config().setTheme(Theme.DARK);
 			spark.config().setReportName("Vasanth");
@@ -31,11 +31,12 @@ public final class ExtentReporter {
 		}
 	}
 
-	public static void tearDownReports() throws IOException {
+	public static void tearDownReports() throws Exception {
 		if (Objects.nonNull(report)) {
 			report.flush();
+			ExtentManager.unload();
 		}
-		Desktop.getDesktop().browse(new File("index.html").toURI());// Open the file on the desktop default browser
+		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());// Open the file on the desktop default browser
 
 	}
 
