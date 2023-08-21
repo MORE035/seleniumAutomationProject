@@ -1,4 +1,5 @@
-url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+url=https://www.amazon.in/
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 browser=chrome
 #dynamic reports yes or no
 #if "no" report will have name with "current time + index.html"

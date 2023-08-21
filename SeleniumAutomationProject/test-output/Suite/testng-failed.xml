@@ -8,13 +8,13 @@
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="org.sap.tests.OrangeHrmTests">
+      <class name="org.sap.tests.AmazonDemoTest">
         <methods>
+          <include name="amazonTest" invocation-numbers="2"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="newTest1" invocation-numbers="0"/>
         </methods>
-      </class> <!-- org.sap.tests.OrangeHrmTests -->
+      </class> <!-- org.sap.tests.AmazonDemoTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

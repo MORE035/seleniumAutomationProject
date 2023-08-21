@@ -1,7 +1,5 @@
 package org.sap.reports;
 
-import org.openqa.selenium.WebDriver;
-
 import com.aventstack.extentreports.ExtentTest;
 
 public class ExtentManager {
@@ -10,7 +8,7 @@ public class ExtentManager {
 		
 	}
 	public static ThreadLocal<ExtentTest> test=new ThreadLocal<ExtentTest>();
-	 static ExtentTest getExtentTest() {
+	public  static ExtentTest getExtentTest() {
 		return test.get();
 	}
 	 static void setExtentTest(ExtentTest extentTest) {

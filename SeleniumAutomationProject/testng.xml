@@ -9,6 +9,7 @@
 	<test thread-count="4" name="Test" parallel="methods">
 		<classes>
 			<class name="org.sap.tests.OrangeHrmTests" />
+			<class name="org.sap.tests.AmazonDemoTest" />
 
 		</classes>
 	</test> <!--

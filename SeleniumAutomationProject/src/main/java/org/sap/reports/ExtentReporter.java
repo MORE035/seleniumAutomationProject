@@ -5,6 +5,8 @@ import java.io.File;
 import java.util.Objects;
 
 import org.sap.constants.FrameworkConstants;
+import org.sap.enums.AuthorNames;
+import org.sap.enums.CategoryType;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -42,5 +44,15 @@ public final class ExtentReporter {
 
 	public static void createTest(String testName) {
 		ExtentManager.setExtentTest(report.createTest(testName));
+	}
+	public static void addAuthors(AuthorNames[] authors) {
+		for(AuthorNames temp:authors) {
+			ExtentManager.getExtentTest().assignAuthor(temp.toString());
+		}
+	}
+	public static void addCatogeries(CategoryType[] catogeries) {
+		for(CategoryType temp:catogeries) {
+			ExtentManager.getExtentTest().assignCategory(temp.toString());
+		}
 	}
 }

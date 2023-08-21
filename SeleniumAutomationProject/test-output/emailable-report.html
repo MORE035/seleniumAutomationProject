@@ -9,48 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,664</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">22,763</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.sap.tests.OrangeHrmTests</td><td><a href="#m0">newTest1</a></td><td rowspan="1">1691500319550</td><td rowspan="1">14598</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">org.sap.tests.OrangeHrmTests</td><td><a href="#m1">loginLogoutTest1</a></td><td rowspan="2">1691500320193</td><td rowspan="2">8972</td></tr><tr class="passedeven"><td><a href="#m2">loginLogoutTest1</a></td></tr><tr class="passedeven"><td><a href="#m3">loginLogoutTest2</a></td><td rowspan="1">1691500322573</td><td rowspan="1">8373</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.sap.tests.AmazonDemoTest</td><td><a href="#m0">amazonTest</a></td><td rowspan="2">1692595077584</td><td rowspan="2">3042</td></tr><tr class="passedeven"><td><a href="#m1">amazonTest</a></td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">org.sap.tests.OrangeHrmTests#newTest1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{browser=chrome, testname=newTest1, execute=yes, passowrd=admin1234, faname=malathi, username=Admin}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[@class=&apos;oxd-userdropdown-name&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at org.sap.factories.ExpliciteWaitFactory.performExplicteWait(ExpliciteWaitFactory.java:17)
-	at org.sap.pages.BasePage.click(BasePage.java:15)
-	at org.sap.pages.OrangeHrmHomePage.clickNameDropDown(OrangeHrmHomePage.java:22)
-	at org.sap.tests.OrangeHrmTests.newTest1(OrangeHrmTests.java:43)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[@class=&apos;oxd-userdropdown-name&apos;]&quot;}
-  (Session info: chrome=115.0.5790.171)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MOREVASANTHKUMA&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\SPUGE\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52448}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0ca8c7cd7a5896a0c648f1e64087b092
-*** Element info: {Using=xpath, value=//p[@class=&apos;oxd-userdropdown-name&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 19 more
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.sap.tests.OrangeHrmTests#loginLogoutTest1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{browser=chrome, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=vasanth, username=Admin}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">org.sap.tests.OrangeHrmTests#loginLogoutTest1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{browser=firefox, testname=loginLogoutTest1, execute=yes, passowrd=admin123, faname=, username=Admin}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">org.sap.tests.OrangeHrmTests#loginLogoutTest2</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{browser=edge, testname=loginLogoutTest2, execute=yes, passowrd=admin123, faname=pavan, username=Admin}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">org.sap.tests.AmazonDemoTest#amazonTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{browser=firefox, testname=amazonTest, execute=yes, passowrd=, items=TV, Appliances, Electronics, faname=, username=}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.sap.tests.AmazonDemoTest#amazonTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{browser=edge, testname=amazonTest, execute=yes, passowrd=, items=Mobiles, Computers, faname=, username=}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
