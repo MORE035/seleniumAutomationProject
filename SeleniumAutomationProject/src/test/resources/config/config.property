@@ -16,4 +16,7 @@ skipedstepscreenshot=yes
 
 #Retry Failed test cases -->yes or no
 retryfailedtests=no
+
+#Runmode local or remote
+runmode=local
 	

@@ -10,7 +10,7 @@
     <classes>
       <class name="org.sap.tests.AmazonDemoTest">
         <methods>
-          <include name="amazonTest" invocation-numbers="2"/>
+          <include name="amazonTest" invocation-numbers="0 1"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

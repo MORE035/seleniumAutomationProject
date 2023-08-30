@@ -13,6 +13,9 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.sap.constants.FrameworkConstants;
+import org.sap.exceptions.FrameWorkException;
+import org.sap.exceptions.InputOutputException;
+import org.sap.exceptions.InvalidPathExcelException;
 
 public class ExcelUtils {
 
@@ -20,11 +23,10 @@ public class ExcelUtils {
 	}
 
 	public static List<Map<String, String>> getTestData(String sheetName) {
-		FileInputStream fi = null;
+		;
 		List<Map<String, String>> list = null;
-		try {
-			fi = new FileInputStream(FrameworkConstants.getTestexcelfilepath());
-			Workbook workbook = new XSSFWorkbook(fi);
+		try(FileInputStream fi = new FileInputStream(FrameworkConstants.getTestexcelfilepath()); Workbook workbook = new XSSFWorkbook(fi)) {
+		
 			Sheet sheet = workbook.getSheet(sheetName);
 			
 			Map<String, String> map = null;
@@ -42,22 +44,15 @@ public class ExcelUtils {
 				
 			}
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			/*	StackTraceElement[] a = e.getStackTrace();
+			a[0]=new StackTraceElement("com.sap.utils.ExcelUtils", "getTestData", "ExcelUtils.java",25 );
+			e.setStackTrace(a);
+			throw new RuntimeException("Excel file you trying read not found check file path",e); 
+			*/ // trace the where the error particular happing
+			throw new InvalidPathExcelException("Excel file you trying read not found check file path");
 		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-//				if(Objects.nonNull(workbook)){
-//					workbook.close();
-//				}
-				if (Objects.nonNull(fi)) {
-					fi.close();
-				}
-				
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+			throw new InputOutputException("IO exception while reading excel file");
+		} 
 		return list;
 
 	}

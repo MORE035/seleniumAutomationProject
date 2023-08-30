@@ -1,39 +1,47 @@
 package org.sap.driver;
 
+import java.net.MalformedURLException;
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
+ 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.sap.constants.FrameworkConstants;
 import org.sap.enums.ConfigProperties;
+import org.sap.exceptions.BrowserInvocationFailedException;
+import org.sap.factories.DriverFactories;
 
-import com.sap.utils.JsonUtils;
 import com.sap.utils.ReadPropertyFileUtils;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * 
+ * 
+ * 22-Aug-2023
+ * @author "Vasanth"
+ * @version 1
+ * @since 1
+ * @see DriverManager
+ *  <p> driver class for inition threadwise </p>
+
+ */
 public final class Driver {
+	/**
+	 * private constructor for avoid external usage
+	 */
 	private Driver() {
 
 	}
-
-	public static void initDriver(String driver) throws Exception {
+	/**
+	 * @param browser value from {@link org.sap.tests.BaseTest} values can be chrome and firefox
+	 */
+	public static void initDriver(String browser)  {
 		if (Objects.isNull(DriverManager.getDriver())) {
-			if (driver.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver", FrameworkConstants.getCHROMEDRIVERPATH());
-				// DriverManager.setDriver(new ChromeDriver()); one more way.....
-				DriverManager.setDriver(new ChromeDriver());
-
-			} else if (driver.equalsIgnoreCase("firefox")) {
-
-				System.setProperty("webdriver.gecko.driver", FrameworkConstants.getFirefoxdriverpath());
-				DriverManager.setDriver(new FirefoxDriver() );
-
-			} else if (driver.equalsIgnoreCase("edge")) {
-
-				System.setProperty("webdriver.edge.driver", FrameworkConstants.getEdgedriverpath());
-				DriverManager.setDriver(new EdgeDriver());
+			try {
+				DriverManager.setDriver(DriverFactories.getDriver(browser));
+			} catch (Exception e) {
+				throw new BrowserInvocationFailedException("please check the capabilities of the browser",e.fillInStackTrace());
 			}
 		}
 		DriverManager.getDriver().get(ReadPropertyFileUtils.get(ConfigProperties.URL));
@@ -41,8 +49,10 @@ public final class Driver {
 		// DriverManager.getDriver().manage().timeouts().implicitlyWait(10,
 		// TimeUnit.SECONDS);
 	}
-
-	public static void quitDriver() {
+	/**
+	 * quit the browser
+	 */
+	public static void quitDriver() {	
 		if (Objects.nonNull(DriverManager.getDriver())) {
 			DriverManager.getDriver().quit();
 			DriverManager.unload();

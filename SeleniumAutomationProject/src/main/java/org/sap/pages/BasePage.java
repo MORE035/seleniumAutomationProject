@@ -14,23 +14,18 @@ public class BasePage {
 	protected void click(By by, WaitStrategy waitStrategy,String elementName)  {
 		ExpliciteWaitFactory.performExplicteWait(waitStrategy, by).click();
 		//ExtentLogger.pass(elementName);
-		try {
+		
 			ExtentLogger.pass(elementName, true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
 		
 		//DriverManager.getDriver().findElement(by).click(); //clubed this code into Explicitewait factory
 	}
 
 	protected void enterText(By by, WaitStrategy waitStrategy, String value,String elementName){
 		ExpliciteWaitFactory.performExplicteWait(waitStrategy, by).sendKeys(value);;
-		try {
+		
 			ExtentLogger.pass("value "+value+" entered in "+elementName,true);
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
+		
 
 		//DriverManager.getDriver().findElement(by).sendKeys(value); //clubed this code into Explicitewait factory
 	}

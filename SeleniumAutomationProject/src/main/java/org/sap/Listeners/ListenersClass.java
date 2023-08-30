@@ -46,25 +46,22 @@ public class ListenersClass implements ITestListener, ISuiteListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// ExtentLogger.pass(result.getMethod().getMethodName()+" is passed");
-		try {
+		
 			ExtentLogger.pass(result.getMethod().getMethodName() + " is passed", true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// ExtentLogger.fail(result.getMethod().getMethodName()+" is failed");
-		try {
-			ExtentLogger.fail(result.getMethod().getMethodName() + " is failed", true);
+			
+				ExtentLogger.fail(result.getMethod().getMethodName() + " is failed", true);
+			
 			ExtentLogger.fail(result.getThrowable().toString());// exception will print in reports
 			ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));// whole Exception will print at
 																						// reports
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
 		// atatch screenshot
 
 	}
@@ -72,11 +69,9 @@ public class ListenersClass implements ITestListener, ISuiteListener {
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		// ExtentLogger.skip(result.getMethod().getMethodName()+" is skipped");
-		try {
+		
 			ExtentLogger.skip(result.getMethod().getMethodName() + " is skipped", true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
 
 	}
 

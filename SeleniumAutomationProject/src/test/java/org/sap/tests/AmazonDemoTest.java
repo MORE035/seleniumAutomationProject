@@ -10,7 +10,6 @@ import org.sap.annotations.FrameWorkAnnotation;
 import org.sap.enums.AuthorNames;
 import org.sap.enums.CategoryType;
 import org.sap.pages.AmazonHomePage;
-import org.sap.reports.ExtentManager;
 import org.testng.annotations.Test;
 
 public final class AmazonDemoTest extends BaseTest{

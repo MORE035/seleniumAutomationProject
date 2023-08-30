@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.exercise.testNgListners.Runner">
+      <class name="org.exercise.docker.ExecuteTestsInDocker">
         <methods>
-          <include name="tearTest"/>
-          <include name="tearSuite"/>
-          <include name="initSuite"/>
-          <include name="test2"/>
-          <include name="initTest"/>
-          <include name="initMethod"/>
-          <include name="tearMethod"/>
+          <include name="localTestDataProvider" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- org.exercise.testNgListners.Runner -->
+      </class> <!-- org.exercise.docker.ExecuteTestsInDocker -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

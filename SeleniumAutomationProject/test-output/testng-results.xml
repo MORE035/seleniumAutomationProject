@@ -1,50 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-21T10:47:40 IST" name="Suite" finished-at="2023-08-21T10:48:03 IST" duration-ms="22763">
+  <suite started-at="2023-08-30T12:39:13 IST" name="Suite" finished-at="2023-08-30T12:40:01 IST" duration-ms="47458">
     <groups>
     </groups>
-    <test started-at="2023-08-21T10:47:40 IST" name="Test" finished-at="2023-08-21T10:48:03 IST" duration-ms="22763">
+    <test started-at="2023-08-30T12:39:13 IST" name="Test" finished-at="2023-08-30T12:40:01 IST" duration-ms="47458">
       <class name="org.sap.tests.AmazonDemoTest">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:org.sap.tests.AmazonDemoTest@4c583ecf]" started-at="2023-08-21T10:47:41 IST" name="setUp" finished-at="2023-08-21T10:47:47 IST" duration-ms="5534" status="PASS">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:org.sap.tests.AmazonDemoTest@3590fc5b]" started-at="2023-08-30T12:39:15 IST" name="setUp" finished-at="2023-08-30T12:39:23 IST" duration-ms="7989" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6b68cb27]]>
+                <![CDATA[[Ljava.lang.Object;@19569ebd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="amazonTest(java.util.Map)[pri:0, instance:org.sap.tests.AmazonDemoTest@4c583ecf]" started-at="2023-08-21T10:47:47 IST" name="amazonTest" description="Demo checking with other sites" data-provider="getData" finished-at="2023-08-21T10:47:50 IST" duration-ms="2871" status="PASS">
+        <test-method signature="amazonTest(java.util.Map)[pri:0, instance:org.sap.tests.AmazonDemoTest@3590fc5b]" started-at="2023-08-30T12:39:23 IST" name="amazonTest" description="For checking" data-provider="getData" finished-at="2023-08-30T12:39:34 IST" duration-ms="10459" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{browser=edge, testname=amazonTest, execute=yes, passowrd=, items=Mobiles, Computers, faname=, username=}]]>
+                <![CDATA[{browser=chrome, testname=amazonTest, execute=yes, passowrd=, items=Mobiles, Computers, faname=, username=}]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id='nav-hamburger-menu'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id='nav-hamburger-menu'] (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at org.sap.factories.ExpliciteWaitFactory.performExplicteWait(ExpliciteWaitFactory.java:17)
+at org.sap.pages.BasePage.click(BasePage.java:15)
+at org.sap.pages.AmazonHomePage.clickHamburgerMenu(AmazonHomePage.java:11)
+at org.sap.tests.AmazonDemoTest.amazonTest(AmazonDemoTest.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='nav-hamburger-menu']"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MOREVASANTHKUMA', ip: '172.26.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\SPUGE\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63080}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4321472d83b0adf1a080ea7dd9e042a5
+*** Element info: {Using=xpath, value=//a[@id='nav-hamburger-menu']}
+at jdk.internal.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 19 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amazonTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.sap.tests.AmazonDemoTest@4c583ecf]" started-at="2023-08-21T10:47:50 IST" name="tearDown" finished-at="2023-08-21T10:47:51 IST" duration-ms="485" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.sap.tests.AmazonDemoTest@3590fc5b]" started-at="2023-08-30T12:39:34 IST" name="tearDown" finished-at="2023-08-30T12:39:36 IST" duration-ms="1535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:org.sap.tests.AmazonDemoTest@4c583ecf]" started-at="2023-08-21T10:47:51 IST" name="setUp" finished-at="2023-08-21T10:47:57 IST" duration-ms="6338" status="PASS">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:org.sap.tests.AmazonDemoTest@3590fc5b]" started-at="2023-08-30T12:39:36 IST" name="setUp" finished-at="2023-08-30T12:39:45 IST" duration-ms="9405" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@675ffd1d]]>
+                <![CDATA[[Ljava.lang.Object;@4632cfc]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="amazonTest(java.util.Map)[pri:0, instance:org.sap.tests.AmazonDemoTest@4c583ecf]" started-at="2023-08-21T10:47:57 IST" name="amazonTest" description="Demo checking with other sites" data-provider="getData" finished-at="2023-08-21T10:48:00 IST" duration-ms="3042" status="PASS">
+        <test-method signature="amazonTest(java.util.Map)[pri:0, instance:org.sap.tests.AmazonDemoTest@3590fc5b]" started-at="2023-08-30T12:39:45 IST" name="amazonTest" description="For checking" data-provider="getData" finished-at="2023-08-30T12:39:58 IST" duration-ms="12510" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -52,10 +111,68 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[text()='TV, Appliances, Electronics'] (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[text()='TV, Appliances, Electronics'] (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at org.sap.factories.ExpliciteWaitFactory.performExplicteWait(ExpliciteWaitFactory.java:17)
+at org.sap.pages.BasePage.click(BasePage.java:15)
+at org.sap.pages.AmazonHambergerMenuPage.clickSubMenuItem(AmazonHambergerMenuPage.java:17)
+at org.sap.tests.AmazonDemoTest.amazonTest(AmazonDemoTest.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[text()='TV, Appliances, Electronics']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MOREVASANTHKUMA', ip: '172.26.96.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 116.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230815173142, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 56792, moz:profile: C:\Users\SPUGE\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 860bbc64-c452-4a84-aec5-625349630554
+*** Element info: {Using=xpath, value=//div[text()='TV, Appliances, Electronics']}
+at jdk.internal.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 19 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amazonTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.sap.tests.AmazonDemoTest@4c583ecf]" started-at="2023-08-21T10:48:01 IST" name="tearDown" finished-at="2023-08-21T10:48:03 IST" duration-ms="2317" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.sap.tests.AmazonDemoTest@3590fc5b]" started-at="2023-08-30T12:39:58 IST" name="tearDown" finished-at="2023-08-30T12:40:01 IST" duration-ms="2742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

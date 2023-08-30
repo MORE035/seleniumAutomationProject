@@ -43,14 +43,14 @@ public final class FrameworkConstants {
 		return CONFIGFILEPATH;
 	}
 
-	public static String getExtentReportFilePath() throws Exception {
+	public static String getExtentReportFilePath()  {
 		if (extentReportFilePath.isEmpty()) {
 		extentReportFilePath=creatReporterPath();
 		}
 		return extentReportFilePath;
 	}
 
-	public static String creatReporterPath() throws Exception {
+	public static String creatReporterPath()  {
 		if(ReadPropertyFileUtils.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("no")){
 		return	EXTENTREPORTFOLDERPATH+System.currentTimeMillis()+"index.html";
 		}
